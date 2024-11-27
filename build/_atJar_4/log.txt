@@ -1,0 +1,7 @@
+Java Launcher: /root/minecraftjdk/jdk-21.0.5+11/bin/java
+Arguments: '--inJar, /root/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.16/forge-1.21.1-52.0.16-injected.jar, --outJar, /root/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21/forge-1.21.1-52.0.16_mapped_parchment_2024.07.28-1.21.jar, --logFile, accesstransform.log, --atFile, /var/git/mc_raygun.git/build/_atJar_4/parent_at.cfg'
+Classpath:
+ - /root/.gradle/caches/forge_gradle/maven_downloader/net/minecraftforge/accesstransformers/8.2.0/accesstransformers-8.2.0-fatjar.jar
+Working directory: /var/git/mc_raygun.git/build/_atJar_4
+Main class: net.minecraftforge.accesstransformer.TransformerProcessor
+====================================
