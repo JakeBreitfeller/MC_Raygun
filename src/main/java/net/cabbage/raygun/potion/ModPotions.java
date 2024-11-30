@@ -1,6 +1,6 @@
 package net.cabbage.raygun.potion;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.effect.ModEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.alchemy.Potion;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS =
-            DeferredRegister.create(ForgeRegistries.POTIONS, TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.POTIONS, RaygunMod.MOD_ID);
 
     public static final RegistryObject<Potion> SLIMEY_POTION = POTIONS.register("slimey_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT.getHolder().get(), 200, 0)));

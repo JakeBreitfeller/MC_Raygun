@@ -1,6 +1,6 @@
 package net.cabbage.raygun.enchantment;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.enchantment.custom.LightningStrikerEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -15,7 +15,7 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 
 public class ModEnchantments {
     public static final ResourceKey<Enchantment> LIGHTNING_STRIKER = ResourceKey.create(Registries.ENCHANTMENT,
-            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "lightning_striker"));
+            ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "lightning_striker"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);

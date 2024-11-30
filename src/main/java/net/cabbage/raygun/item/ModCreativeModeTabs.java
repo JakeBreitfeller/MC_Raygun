@@ -1,6 +1,6 @@
 package net.cabbage.raygun.item;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, RaygunMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> ALEXANDRITE_ITEMS_TAB = CREATIVE_MODE_TABS.register("alexanderite_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))

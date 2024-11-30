@@ -1,6 +1,6 @@
 package net.cabbage.raygun.event;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.item.custom.HammerItem;
 import net.cabbage.raygun.potion.ModPotions;
 import net.minecraft.core.BlockPos;
@@ -23,7 +23,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.HashSet;
 import java.util.Set;
 
-@Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = RaygunMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 

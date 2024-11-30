@@ -1,6 +1,6 @@
 package net.cabbage.raygun.trim;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.item.ModItems;
 import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class ModTrimMaterials {
     public static final ResourceKey<TrimMaterial> ALEXANDRITE =
-            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "alexandrite"));
+            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "alexandrite"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
         register(context, ALEXANDRITE, ModItems.ALEXANDRITE.get(), Style.EMPTY.withColor(TextColor.parseColor("#031cfc").getOrThrow()), 0.8F);

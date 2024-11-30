@@ -1,6 +1,6 @@
 package net.cabbage.raygun.datagen;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.block.ModBlocks;
 import net.cabbage.raygun.block.custom.AlexandriteLampBlock;
 import net.cabbage.raygun.block.custom.HoneyBerryBushBlock;
@@ -22,7 +22,7 @@ import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, TutorialMod.MOD_ID, exFileHelper);
+        super(output, RaygunMod.MOD_ID, exFileHelper);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(HoneyBerryBushBlock.AGE),
-                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + textureName + state.getValue(HoneyBerryBushBlock.AGE))).renderType("cutout"));
+                ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "block/" + textureName + state.getValue(HoneyBerryBushBlock.AGE))).renderType("cutout"));
 
         return models;
     }
@@ -83,7 +83,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()),
-                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + textureName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()))).renderType("cutout"));
+                ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "block/" + textureName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }
@@ -92,14 +92,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getVariantBuilder(ModBlocks.ALEXANDRITE_LAMP.get()).forAllStates(state -> {
             if(state.getValue(AlexandriteLampBlock.CLICKED)) {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("alexandrite_lamp_on",
-                        ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + "alexandrite_lamp_on")))};
+                        ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "block/" + "alexandrite_lamp_on")))};
             } else {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("alexandrite_lamp_off",
-                        ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + "alexandrite_lamp_off")))};
+                        ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "block/" + "alexandrite_lamp_off")))};
             }
         });
         simpleBlockItem(ModBlocks.ALEXANDRITE_LAMP.get(), models().cubeAll("alexandrite_lamp_on",
-                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + "alexandrite_lamp_on")));
+                ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "block/" + "alexandrite_lamp_on")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

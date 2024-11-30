@@ -1,7 +1,7 @@
 package net.cabbage.raygun.enchantment;
 
 import com.mojang.serialization.MapCodec;
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.enchantment.custom.LightningStrikerEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEnchantmentEffects {
     public static final DeferredRegister<MapCodec<? extends EnchantmentEntityEffect>> ENTITY_ENCHANTMENT_EFFECTS =
-            DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, TutorialMod.MOD_ID);
+            DeferredRegister.create(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, RaygunMod.MOD_ID);
 
     public static final RegistryObject<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
             ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker", () -> LightningStrikerEnchantmentEffect.CODEC);

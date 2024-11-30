@@ -1,6 +1,6 @@
 package net.cabbage.raygun.item;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.block.ModBlocks;
 import net.cabbage.raygun.item.custom.ChiselItem;
 import net.cabbage.raygun.item.custom.FuelItem;
@@ -19,7 +19,7 @@ import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, RaygunMod.MOD_ID);
 
     public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("alexandrite",
             () -> new Item(new Item.Properties()));
@@ -78,7 +78,7 @@ public class ModItems {
                     false, new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.register("kaupen_armor_trim_smithing_template",
-            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "kaupen")));
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "kaupen")));
 
     public static final RegistryObject<Item> KAUPEN_BOW = ITEMS.register("kaupen_bow",
             () -> new BowItem(new Item.Properties().durability(500)));

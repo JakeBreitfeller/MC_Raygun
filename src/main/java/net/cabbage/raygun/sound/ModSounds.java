@@ -1,6 +1,6 @@
 package net.cabbage.raygun.sound;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, RaygunMod.MOD_ID);
 
     public static final RegistryObject<SoundEvent> CHISEL_USE = registerSoundEvent("chisel_use");
 
@@ -30,12 +30,12 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> BAR_BRAWL = registerSoundEvent("bar_brawl");
     public static final ResourceKey<JukeboxSong> BAR_BRAWL_KEY = ResourceKey.create(Registries.JUKEBOX_SONG,
-            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bar_brawl"));
+            ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "bar_brawl"));
 
 
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
-        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, name)));
+        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, name)));
     }
 
     public static void register(IEventBus eventBus) {

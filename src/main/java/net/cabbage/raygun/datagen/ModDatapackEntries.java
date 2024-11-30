@@ -1,6 +1,6 @@
 package net.cabbage.raygun.datagen;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.enchantment.ModEnchantments;
 import net.cabbage.raygun.trim.ModTrimMaterials;
 import net.cabbage.raygun.trim.ModTrimPatterns;
@@ -20,6 +20,6 @@ public class ModDatapackEntries extends DatapackBuiltinEntriesProvider {
             .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap);
 
     public ModDatapackEntries(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(TutorialMod.MOD_ID));
+        super(output, registries, BUILDER, Set.of(RaygunMod.MOD_ID));
     }
 }

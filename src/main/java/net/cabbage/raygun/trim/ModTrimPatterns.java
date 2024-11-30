@@ -1,6 +1,6 @@
 package net.cabbage.raygun.trim;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.item.ModItems;
 import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
@@ -14,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModTrimPatterns {
     public static final ResourceKey<TrimPattern> KAUPEN = ResourceKey.create(Registries.TRIM_PATTERN,
-            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "kaupen"));
+            ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "kaupen"));
 
     public static void bootstrap(BootstrapContext<TrimPattern> context) {
         register(context, ModItems.KAUPEN_SMITHING_TEMPLATE.get(), KAUPEN);

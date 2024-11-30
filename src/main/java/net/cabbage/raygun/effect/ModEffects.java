@@ -1,6 +1,6 @@
 package net.cabbage.raygun.effect;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -13,11 +13,11 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
-            DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, RaygunMod.MOD_ID);
 
     public static final RegistryObject<MobEffect> SLIMEY_EFFECT = MOB_EFFECTS.register("slimey",
             () -> new SlimeyEffect(MobEffectCategory.NEUTRAL, 0x36ebab)
-                    .addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "slimey"),
+                    .addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(RaygunMod.MOD_ID, "slimey"),
                             -0.25f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
 

@@ -1,6 +1,6 @@
 package net.cabbage.raygun.component;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
@@ -12,7 +12,7 @@ import java.util.function.UnaryOperator;
 
 public class ModDataComponentTypes {
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES =
-            DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, TutorialMod.MOD_ID);
+            DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, RaygunMod.MOD_ID);
 
     public static final RegistryObject<DataComponentType<BlockPos>> COORDINATES = register("coordinates",
             builder -> builder.persistent(BlockPos.CODEC));

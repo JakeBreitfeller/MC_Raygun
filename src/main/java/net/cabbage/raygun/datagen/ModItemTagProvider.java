@@ -1,6 +1,6 @@
 package net.cabbage.raygun.datagen;
 
-import net.cabbage.raygun.TutorialMod;
+import net.cabbage.raygun.RaygunMod;
 import net.cabbage.raygun.item.ModItems;
 import net.cabbage.raygun.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModItemTagProvider extends ItemTagsProvider {
     public ModItemTagProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> completableFuture,
                               CompletableFuture<TagLookup<Block>> lookupCompletableFuture, @Nullable ExistingFileHelper existingFileHelper) {
-        super(packOutput, completableFuture, lookupCompletableFuture, TutorialMod.MOD_ID, existingFileHelper);
+        super(packOutput, completableFuture, lookupCompletableFuture, RaygunMod.MOD_ID, existingFileHelper);
     }
 
     @Override

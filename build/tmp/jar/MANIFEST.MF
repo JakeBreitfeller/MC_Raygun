@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: raygunmod
+Specification-Vendor: Bitter_Cabbage
+Specification-Version: 1
+Implementation-Title: mc_raygun.git
+Implementation-Version: 1.0.0
+Implementation-Vendor: Bitter_Cabbage
+
